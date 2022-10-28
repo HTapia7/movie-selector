@@ -1,0 +1,40 @@
+body {
+    margin-bottom: 200px;
+
+}
+
+.subscribe {
+    border-bottom: 2px solid;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.row {
+    display: inline-block
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    outline: none;
+  }
+  
+  input[type=text]:focus {
+    background-color: rgb(91, 102, 105);
+  }
+.copyright {
+    text-align: center;
+}
+
+.submit-btn {
+    margin-top: 20px;
+    margin-left: 15px;
+    align-items: center;
+    padding: 5px 5px 5px 5px;
+    cursor: pointer;
+
+}

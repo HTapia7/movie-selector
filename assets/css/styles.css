@@ -1,0 +1,14 @@
+.card
+{
+    width: 350px;
+}
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-floating{
+    padding-bottom: 10px;
+}

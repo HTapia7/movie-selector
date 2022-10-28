@@ -26,7 +26,7 @@ input[type=text] {
   input[type=text]:focus {
     background-color: rgb(91, 102, 105);
   }
-.copyright {
+.copyright, .heart {
     text-align: center;
 }
 

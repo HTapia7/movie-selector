@@ -17,7 +17,7 @@ Framework used:
 ## Contributers
 * [Dionne Angeles]()
 * [Hernan Tapia]()
-* [Jeevan Johal]()
+* [Jeevan Johal](https://github.com/jkjohal)
 
 ## [Deployed Application](https://htapia7.github.io/movie-selector/)
 

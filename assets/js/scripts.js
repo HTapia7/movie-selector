@@ -50,7 +50,7 @@ form.addEventListener('submit', function(e){
 
     var userInput = form.querySelector('#search-movie').value
     var secondApiKey = 'apikey=264a5361'
-    var completeUrl = 'http://www.omdbapi.com/?s=' + userInput + '&' + secondApiKey
+    var completeUrl = 'https://www.omdbapi.com/?s=' + userInput + '&' + secondApiKey
 
     fetch(completeUrl)
         .then(function(response){

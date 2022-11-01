@@ -8,67 +8,69 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka+One">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro">
-
-
     <link rel = 'stylesheet' href="./assets/css/styles.css">
-    <title>NewFlix Homepage</title>
+    <title>NewFlix</title>
 </head>
 <body class="style:">
-<h1 class="center-align red-text text-accent-4 NewFlix">NewFlix</h1>
-<h5 class="subtitle center-align white-text">Home to today's newest flicks!</h5>
+<header>
+  <h1 class="center-align red-text text-accent-4 NewFlix">NewFlix</h1>
+  <h2 class="subtitle center-align white-text">Home to today's newest flicks!</h2>
 
+  <!-- <h2>Recent Viewed Movie </h2> -->
 
     <!-- Modal Trigger -->
-  <button data-target="modal1" class="btn modal-trigger blue darken-4"> Love movies? Sign up for our weekly newsletter!</button>
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal">
-      <div class="modal-content">
-        <h4>Sign up for our weekly newsletter!</h4>
-        <div class="row">
-          <form class="col s12">
-            <div class="row">
-              <div class="input-field col s6">
-                <input placeholder="First Name" id="first_name" type="text" class="validate">
-                <label for="first_name">First Name</label>
-              </div>
-              <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Last Name</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
-                <label for="email">Email</label>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Submit</a>
-      </div>
-    </div>
+  <div class='row'>
+      <button data-target="modal1" class="btn modal-trigger blue darken-4 col s6 offset-s3 "> Love movies? Sign up for our weekly newsletter!</button>
+  </div>
+
+  <div class="searchbar-container row ">
+    <form id="search">
+      <input class = 'white-text col s6 offset-s3' type="text" name="Movie" id="search-movie" placeholder="Search..">
+    </form>
+  </div>
+  <div class="search-container"></div>
   </header>
 
   <main>
+    <h2 class="white-text center-align subtitle">New Releases</h2>
     <div id="container"></div>
   </main>    
-
+  
   <footer>
-
-    
-   
-    
-
-</body>
-
-<footer>
     <p class="copyright white-text center-align">&copy; Group 9 Inc.</p>
-
   </footer>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./assets/js/scripts.js"></script>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Sign up for our weekly newsletter!</h4>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="First Name" id="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Last Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Submit</a>
+    </div>
+  </div>
 </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./assets/js/scripts.js"></script>
 </html>

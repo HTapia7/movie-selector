@@ -13,12 +13,24 @@
     padding-bottom: 10px;
 }
 
+.search-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
 body{
-    background-color: black;}
+    background-color: black;
+}
 
 .NewFlix{
     font-family: Fredoka One;
 }
 .subtitle{
     font-family: Maven Pro;
+}
+
+[data-target="modal1"] {
+    height: auto
 }

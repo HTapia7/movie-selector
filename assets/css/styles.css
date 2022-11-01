@@ -19,3 +19,14 @@
     gap: 20px;
     justify-content: center;
 }
+
+body{
+    background-color: black;
+}
+
+.NewFlix{
+    font-family: Fredoka One;
+}
+.subtitle{
+    font-family: Maven Pro;
+}

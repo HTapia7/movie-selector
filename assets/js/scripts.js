@@ -1,20 +1,21 @@
-//API 1 for cards//
+// var API 1 for cards
 var myApiKey = '9b5395eaf05fdecc1777b99cac9a49d7'; 
-var baseUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=' + myApiKey + '&language=en-US&sort_by=popularity.desc';
-
+var fullUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=' + myApiKey + '&language=en-US&sort_by=popularity.desc';
 var pictureUrl = "https://image.tmdb.org/t/p/w500/";
 var container = document.getElementById('container');
 
+// var API 2 for Search Bar 
+var form = document.querySelector('#search')
+
 function movieData(){
     
-    fetch(baseUrl)
+    fetch(fullUrl)
         .then(function(response){
             if(response.ok){
                 return response.json()
             }
         })
         .then(function(data){
-
             data.results.forEach(function(element){
 
                 var movieCard = document.createElement('div')
@@ -32,28 +33,23 @@ function movieData(){
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Overview<i class="material-icons right">close</i></span>
                   <p>${element.overview}</p>
-                </div>
-                 
+                </div>                 
                 `
                 container.appendChild(movieCard)
         })     
     })
 }
 
-movieData()
-
-  // -------------------------------------------------- // 
-
-var form = document.querySelector('#search')
-
 form.addEventListener('submit', function(e){
     e.preventDefault()
 
+    loadLastItem()
+
+    var form = document.querySelector('#search')
     var userInput = form.querySelector('#search-movie').value
     var secondApiKey = 'apikey=264a5361'
     var completeUrl = 'https://www.omdbapi.com/?s=' + userInput + '&' + secondApiKey
 
-      console.log(completeUrl)
     fetch(completeUrl)
         .then(function(response){
             if(response.ok){
@@ -81,7 +77,17 @@ form.addEventListener('submit', function(e){
                 searchContainer.appendChild(movieCard)
             })
         })
+        localStorage.setItem("search-movie", (userInput))
+
 })
+
+// Local Storage 
+function loadLastItem() {
+  var lastSearch = document.getElementById("last-search")
+  var localStorageItem = localStorage.getItem("search-movie")
+  lastSearch.classList.add('subtitle')
+  lastSearch.textContent = "Last search: " + localStorageItem
+}
 
 // Modal Js from Materalize 
 document.addEventListener('DOMContentLoaded', function() {
@@ -94,3 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.modal');
   var instances = M.Modal.init(elems);
 });
+
+// Call MovieData Function
+movieData()

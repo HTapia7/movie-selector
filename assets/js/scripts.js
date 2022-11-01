@@ -4,8 +4,6 @@ var fullUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=' + myApiKey 
 var pictureUrl = "https://image.tmdb.org/t/p/w500/";
 var container = document.getElementById('container');
 
-// var API 2 for Search Bar 
-var form = document.querySelector('#search')
 
 function movieData(){
     
@@ -39,6 +37,8 @@ function movieData(){
         })     
     })
 }
+
+var form = document.querySelector('#search')
 
 form.addEventListener('submit', function(e){
     e.preventDefault()
@@ -78,7 +78,6 @@ form.addEventListener('submit', function(e){
             })
         })
         localStorage.setItem("search-movie", (userInput))
-
 })
 
 // Local Storage 
@@ -101,5 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
   var instances = M.Modal.init(elems);
 });
 
-// Call MovieData Function
+// Call Function
 movieData()
+loadLastItem()

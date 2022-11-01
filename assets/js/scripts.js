@@ -14,6 +14,7 @@ function movieData(){
             }
         })
         .then(function(data){
+
             data.results.forEach(function(element){
 
                 var movieCard = document.createElement('div')
@@ -52,6 +53,7 @@ form.addEventListener('submit', function(e){
     var secondApiKey = 'apikey=264a5361'
     var completeUrl = 'https://www.omdbapi.com/?s=' + userInput + '&' + secondApiKey
 
+      console.log(completeUrl)
     fetch(completeUrl)
         .then(function(response){
             if(response.ok){
@@ -60,6 +62,7 @@ form.addEventListener('submit', function(e){
         })
         .then(function(data){
             var searchContainer = document.querySelector('.search-container')
+            searchContainer.innerHTML = ''
             data.Search.forEach(function(element){
 
                 var movieCard = document.createElement('div')
@@ -71,7 +74,8 @@ form.addEventListener('submit', function(e){
 
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4">${element.Title}</span>
-                    <p>${element.Type}</p>
+                    <p>Type: ${element.Type}</p>
+                    <p>Release Year: ${element.Year}</p>
                 </div>
                 `
                 searchContainer.appendChild(movieCard)

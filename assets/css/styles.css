@@ -30,3 +30,7 @@ body{
 .subtitle{
     font-family: Maven Pro;
 }
+
+[data-target="modal1"] {
+    height: auto
+}

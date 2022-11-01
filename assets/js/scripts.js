@@ -41,7 +41,6 @@ function movieData(){
             
             <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">${element.title}<i class="material-icons right">more_vert </i></span>
-                <p class = "watchlist-btn"><a href="#">Add to Watchlist</a></p>
 
             </div>
   
@@ -59,26 +58,5 @@ function movieData(){
 // Info I want from database is Title, poster , vote_average , overview 
 movieData()
 
-// //Local Storage (adding movies to watchlist)
+// //Local Storage 
 
-// var watchlistBtn = document.querySelector("#watchlist-btn");
-// var watchlist = document.querySelector("#watchlist-items");
-
-
-
-// // function createListItem(){
-// //   const newLi = watchlist.createElement("li")
-  
-// //   const listItemContent = document.newLi(card.title)
-// // };
-
-// //event listener for click
-// watchlistBtn.addEventListener("click", function(){
-//   document.watchlist.appendChild(newLi)
-//   var newLi = document.watchlist.createElement("li")
-//   newLi.textcontent = "this.card-title" 
-// });
-
-// //append to watchlist and add to local storage
-
-// //get items from local storage

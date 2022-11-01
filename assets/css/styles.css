@@ -29,6 +29,12 @@ body{
 }
 .subtitle{
     font-family: Maven Pro;
+    font-size: 30px;
+}
+
+.main-header{
+    font-family: Maven Pro;
+    font-size: 45px;
 }
 
 [data-target="modal1"] {

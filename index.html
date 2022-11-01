@@ -12,27 +12,26 @@
     <title>NewFlix</title>
 </head>
 <body class="style:">
-<header>
-  <h1 class="center-align red-text text-accent-4 NewFlix">NewFlix</h1>
-  <h2 class="subtitle center-align white-text">Home to today's newest flicks!</h2>
+  <header>
+    <h1 class="center-align red-text text-accent-4 NewFlix">NewFlix</h1>
+    <h2 class="subtitle center-align white-text">Home to today's newest flicks!</h2>
 
-  <!-- <h2>Recent Viewed Movie </h2> -->
+      <!-- Modal Trigger -->
+    <div class='row'>
+        <button data-target="modal1" class="btn modal-trigger blue darken-4 col s6 offset-s3 "> Love movies? Sign up for our weekly newsletter!</button>
+    </div>
 
-    <!-- Modal Trigger -->
-  <div class='row'>
-      <button data-target="modal1" class="btn modal-trigger blue darken-4 col s6 offset-s3 "> Love movies? Sign up for our weekly newsletter!</button>
-  </div>
-
-  <div class="searchbar-container row ">
-    <form id="search">
-      <input class = 'white-text col s6 offset-s3' type="text" name="Movie" id="search-movie" placeholder="Search..">
-    </form>
-  </div>
-  <div class="search-container"></div>
+    <div class="searchbar-container row ">
+      <form id="search">
+        <input class = 'white-text col s6 offset-s3' type="text" name="Movie" id="search-movie"        placeholder="Search.."><br><br>
+        <h2 class = "white-text center-align" id="last-search"></h2>
+      </form>
+    </div>
+    <div class="search-container"></div>
   </header>
 
   <main>
-    <h2 class="white-text center-align subtitle">New Releases</h2>
+    <h2 class="white-text center-align main-header">New Releases</h2>
     <div id="container"></div>
   </main>    
   
@@ -69,8 +68,8 @@
       <a href="#!" class="modal-close waves-effect waves-green btn-flat">Submit</a>
     </div>
   </div>
-</body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="./assets/js/scripts.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./assets/js/scripts.js"></script>
+</body>
 </html>

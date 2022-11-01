@@ -1,7 +1,6 @@
 var myApiKey = '9b5395eaf05fdecc1777b99cac9a49d7'; 
 var baseUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=' + myApiKey + '&language=en-US&sort_by=popularity.desc';
 
-var form = document.querySelector('#search');
 var pictureUrl = "https://image.tmdb.org/t/p/w500/";
 var container = document.getElementById('container');
 
@@ -18,10 +17,6 @@ function movieData(){
         .then(function(data){
             // console.log(data.results[0].title)
             data.results.forEach(function(element){
-                console.log(element.title)
-                console.log(element.vote_average)
-                console.log(element.overview)
-                console.log(element.poster_path)
 
                 var movieCard = document.createElement('div')
                 movieCard.classList.add('card')
@@ -49,13 +44,52 @@ function movieData(){
 // Info I want from database is Title, poster , vote_average , overview 
 movieData()
 
-
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems);
-  });
-
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.modal');
     var instances = M.Modal.init(elems);
   });
+
+
+
+
+  // -------------------------------------------------- // 
+
+  var form = document.querySelector('#search')
+
+form.addEventListener('submit', function(e){
+    e.preventDefault()
+
+    var userInput = form.querySelector('#search-movie').value
+    var secondApiKey = 'apikey=264a5361'
+    var completeUrl = 'http://www.omdbapi.com/?s=' + userInput + '&' + secondApiKey
+
+    fetch(completeUrl)
+        .then(function(response){
+            if(response.ok){
+                return response.json()
+            }
+        })
+        .then(function(data){
+            var container = document.querySelector('.search-container')
+            data.Search.forEach(function(element){
+
+                var movieCard = document.createElement('div')
+                movieCard.classList.add('card')
+                movieCard.innerHTML = `
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="${element.Poster}">
+
+                </div>
+
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">${element.Title}</span>
+                    <p>${element.Type}</p>
+
+                </div>
+
+
+                `
+                container.appendChild(movieCard)
+            })
+        })
+})

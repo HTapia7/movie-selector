@@ -13,6 +13,11 @@ APIs Used:
 * [TMDB](https://www.themoviedb.org/documentation/api?language=en-US)
 * [OMDb](https://www.omdbapi.com/)
 
+## Technologies 
+* HTML
+* JavaScript
+* CSS
+
 Framework used:
 * [Materialize](https://materializecss.com/)
 

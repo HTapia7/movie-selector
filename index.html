@@ -6,59 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro">
+
+
     <link rel = 'stylesheet' href="./assets/css/styles.css">
-    <title>Movie Selector</title>
+    <title>NewFlix Homepage</title>
 </head>
 <body class="style:">
-<h1 class="center-align">Movie Selector</h1>
+<h1 class="center-align red-text text-accent-4 NewFlix">NewFlix</h1>
+<h5 class="subtitle center-align white-text">Home to today's newest flicks!</h5>
 
-<nav>
-    <div class="nav-wrapper">
-      <form>
-        <div class="input-field">
-          <input id="search" type="search" required>
-          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-          <i class="material-icons">search</i>
-        </div>
-      </form>
-    </div>
-  </nav>
-</header>
 
-<nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo center">Movies or TV series</a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="sass.html">Genres</a></li>
-        <li><a href="badges.html">Language</a></li>
-        <li><a href="collapsible.html">Release Year</a></li>
-      </ul>
-    </div>
-  </nav>
-  
-  <div class="row">
-    <div class="col s12 m6">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title">Movie Info</span>
-          <p>You can choose what type of movie do you want to see. You can create movie lists based on your tastes and filters. You can see the title and poster of your next film to watch.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">Preview</a>
-          <a href="#">Buy or Rent</a>
+    <!-- Modal Trigger -->
+  <button data-target="modal1" class="btn modal-trigger blue darken-4"> Love movies? Sign up for our weekly newsletter!</button>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Sign up for our weekly newsletter!</h4>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="First Name" id="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Submit</a>
+      </div>
     </div>
-  </div>
-<button class="btn waves-effect waves-light">Read More</button>
+  </header>
 
+  <main>
+    <div id="container"></div>
+  </main>    
+
+  <footer>
+
+    
+   
+    
+
+</body>
+
+<footer>
+    <p class="copyright white-text center-align">&copy; Group 9 Inc.</p>
+
+  </footer>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/scripts.js"></script>
 </body>
-
-<footer>
-    <p class="copyright" center-align>&copy;</p>
-
-</footer>
 </html>

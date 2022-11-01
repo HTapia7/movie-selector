@@ -1,0 +1,24 @@
+.card
+{
+    width: 350px;
+}
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-floating{
+    padding-bottom: 10px;
+}
+
+body{
+    background-color: black;}
+
+.NewFlix{
+    font-family: Fredoka One;
+}
+.subtitle{
+    font-family: Maven Pro;
+}

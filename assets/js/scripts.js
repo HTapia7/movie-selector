@@ -6,7 +6,7 @@ var container = document.getElementById('container');
 
 
 function movieData(){
-    
+    // fetching api 
     fetch(fullUrl)
         .then(function(response){
             if(response.ok){
@@ -14,6 +14,7 @@ function movieData(){
             }
         })
         .then(function(data){
+          // looping over the data
             data.results.forEach(function(element){
 
                 var movieCard = document.createElement('div')
@@ -39,12 +40,12 @@ function movieData(){
 }
 
 var form = document.querySelector('#search')
-
 form.addEventListener('submit', function(e){
     e.preventDefault()
 
     loadLastItem()
 
+    // variables 
     var form = document.querySelector('#search')
     var userInput = form.querySelector('#search-movie').value
     var secondApiKey = 'apikey=264a5361'
@@ -77,6 +78,7 @@ form.addEventListener('submit', function(e){
                 searchContainer.appendChild(movieCard)
             })
         })
+        // local storage 
         localStorage.setItem("search-movie", (userInput))
 })
 

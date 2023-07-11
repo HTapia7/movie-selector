@@ -37,6 +37,7 @@ APIs Used:
 * HTML
 * JavaScript
 * CSS
+* API
 
 Framework used:
 * [Materialize](https://materializecss.com/)
